@@ -17,6 +17,9 @@ services:
       - DB_NAME=app
       - DB_USER=postgres
       - DB_PASS=supersecretpassword
+    depends_on:
+      - db
+
 
   db:
     image: postgres:12-alpine
